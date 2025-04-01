@@ -93,7 +93,11 @@ public class InvoiceController {
         try {
             // Set response type and headers for downloading a PDF
             response.setContentType("application/pdf");
-            response.setHeader("Content-Disposition", "attachment; filename=invoice.pdf");
+         //   response.setHeader("Content-Disposition", "attachment; filename=invoice.pdf");
+
+
+response.setHeader("Content-Disposition", "attachment; filename=" + name + "_" + dateTime + "_invoice.pdf");
+
 
             Document document = new Document();
             PdfWriter.getInstance(document, response.getOutputStream()); // May throw DocumentException
