@@ -96,7 +96,7 @@ public class InvoiceController {
          //   response.setHeader("Content-Disposition", "attachment; filename=invoice.pdf");
 
 
-response.setHeader("Content-Disposition", "attachment; filename=" + name + "_" + dateTime + "_invoice.pdf");
+response.setHeader("Content-Disposition", "attachment; filename=" + customerName + "_" + dateTime + "_invoice.pdf");
 
 
             Document document = new Document();
